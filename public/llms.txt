@@ -1,0 +1,17 @@
+# Alloy Studio Changelog Generator
+> The premier AI-powered continuous delivery workspace.
+
+Alloy Studio is an enterprise-grade workspace that monitors repository updates, intelligently extracts context, and reformats Git commits into brilliant, meticulously styled platform-oriented changelog copies.
+
+## Model Context Protocol (MCP) Integration
+Alloy Studio is fully accessible via the Model Context Protocol (MCP).
+You can connect your agents (e.g. Claude Desktop) or workflows to the Alloy Studio MCP server via SSE (Server-Sent Events) at `/mcp/sse`.
+
+The MCP server provides the following capabilities:
+- **simulate_webhook**: Simulates a GitHub push to automatically initiate a workflow in the Alloy pipeline.
+- **get_webhook_history**: Retrieves recent webhook simulated events and their generated summaries.
+- **fetch_github_readme**: Fetches and summarizes a specific GitHub repository's README to provide context for changelogs.
+- **generate_changelog_copies**: Directly calls the generator engine with specific commits, selecting from various stylistic archetypes (e.g., 'poetic', 'visionary', 'analytical', 'tactical') for targets like Twitter, LinkedIn, App Store, Discord, etc.
+
+## Philosophy
+Alloy aims for "Zero-Touch" changelog generation. Developers push commits, and the system does the heavy lifting of extracting context and styling updates perfectly for any desired platform, letting the developer act as a strategic reviewer before broadcast.

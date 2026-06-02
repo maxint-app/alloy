@@ -1,0 +1,23 @@
+# Alloy Studio Changelog Generator - Full Documentation
+> The premier AI-powered continuous delivery workspace.
+
+Alloy Studio is an enterprise-grade workspace that monitors repository updates, intelligently extracts context, and reformats Git commits into brilliant, meticulously styled platform-oriented changelog copies.
+
+## Features
+- **Zero-Touch Configuration**: Receives standard GitHub/GitLab webhooks and automatically triggers the staging sequence.
+- **Dynamic Archetypes**: Can write changelogs as a Visionary, a Tactical Developer, an Analytical Essayist, or directly follow Custom Personas.
+- **Cross-Platform Generation**: Distinctively formats copies for Twitter, LinkedIn, Discord, Hacker News, Blog Posts, and App Stores simultaneously from a single PR/Commit list.
+- **Model Context Protocol (MCP)**: Embedded MCP Server over SSE allowing LLM Agents to natively interface and dispatch capabilities over `/mcp/sse`.
+
+## Model Context Protocol (MCP) Integration
+Alloy Studio is fully accessible via the Model Context Protocol (MCP).
+You can connect your agents (e.g. Claude Desktop) or workflows to the Alloy Studio MCP server via SSE (Server-Sent Events) at `/mcp/sse` and use the fallback POST endpoint at `/mcp/messages`.
+
+### Exposed MCP Tools:
+- **simulate_webhook**: Simulates a GitHub push to automatically initiate a workflow in the Alloy pipeline.
+- **get_webhook_history**: Retrieves recent webhook simulated events and their generated summaries.
+- **fetch_github_readme**: Fetches and summarizes a specific GitHub repository's README to provide context for changelogs.
+- **generate_changelog_copies**: Directly calls the generator engine with specific commits, selecting from various stylistic archetypes (e.g., 'poetic', 'visionary', 'analytical', 'tactical') for targets like Twitter, LinkedIn, App Store, Discord, etc.
+
+## APIs & Usage
+Alloy Studio acts as both an Express backend and an AI front-end pipeline. You can integrate via MCP or run queries manually directly against the `/api/generate` route.

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="alloyGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#09090b" />
+      <stop offset="100%" stop-color="#52525b" />
+    </linearGradient>
+    <linearGradient id="alloyGrad2" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#27272a" />
+      <stop offset="100%" stop-color="#a1a1aa" />
+    </linearGradient>
+  </defs>
+  <path d="M 32,50 C 32,32 48,22 64,32 C 80,42 85,58 69,68 C 53,78 37,68 32,50 Z" fill="url(#alloyGrad1)" />
+  <path d="M 68,50 C 68,68 52,78 36,68 C 20,58 15,42 31,32 C 47,22 63,32 68,50 Z" fill="url(#alloyGrad2)" opacity="0.85" style="mix-blend-mode: multiply;" />
+  <polygon points="50,42 58,50 50,58 42,50" fill="#ffffff" />
+</svg>
